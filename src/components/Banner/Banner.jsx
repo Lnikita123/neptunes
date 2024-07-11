@@ -43,7 +43,7 @@ const Banner = () => {
     return (
         <div className='flex flex-col items-center justify-center'>
             <div className="flex justify-center h-full w-full relative bg-black lg:mt-[10rem]">
-                <div className="bg-[url('gridbg.png')] bg-cover absolute inset-0 opacity-90"></div>
+                <div className="bg-[url('/gridbg1.png')] bg-cover absolute inset-0 "></div>
                 <div className="relative z-10 flex flex-col items-center gap-10 p-8 md:p-10">
                     <h2 className="text-3xl font-semibold text-center text-white z-[100] font1">
                         Reimagine exploring oceans with our tools
