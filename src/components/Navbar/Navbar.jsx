@@ -9,7 +9,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="relative pt-16">
+        <div className="relative z-50 pt-16">
             <div className="fixed top-0 left-0 right-0 flex justify-center bg-black border-b-[0.05px] border-gray-800">
                 <div className="flex items-center justify-between w-full max-w-[1366px] px-5 py-3 overflow-hidden md:px-10">
                     <a href="/" className="cursor-pointer">

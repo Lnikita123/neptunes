@@ -23,7 +23,7 @@ const Communication = () => {
     const activeData = iconData.find(icon => icon.id === activeIcon);
 
     return (
-        <div className="bg-[url('/stars.png')] mt-[10rem]">
+        <div className="bg-[url('/stars.png')] lg:mt-[10rem] mt-[-3rem]">
             <div className="flex flex-col items-center max-w-full py-20 overflow-hidden lg:hidden">
                 <div className="relative h-[400px] md:h-[500px] w-full">
                     <div className="absolute flex items-center justify-center w-full h-full duration-500 ease-in-out" style={{ transform: `scale(${activeIcon === 1 ? '1' : '0.5'})`, opacity: activeIcon === 1 ? 1 : 0 }}>

@@ -134,7 +134,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-sm text-center text-white md:text-base max-w-[1000px] self-center">To lead the future of underwater exploration by providing cutting-edge technology that empowers researchers, scientists, and enthusiasts to unlock the mysteries of the deep sea. We strive to make oceanic discovery more
+            <p className="text-sm text-center text-white md:text-base lg:max-w-[1000px] max-w-[300px] lg:mt-0 mt-20">To lead the future of underwater exploration by providing cutting-edge technology that empowers researchers, scientists, and enthusiasts to unlock the mysteries of the deep sea. We strive to make oceanic discovery more
                 accessible, efficient, and insightful, driving forward our understanding and stewardship of the world&#x27;s oceans.</p>
         </div>
     );

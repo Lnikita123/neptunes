@@ -34,6 +34,7 @@ const App = () => {
       ) : (
         <>
           <Navbar />
+
           <Hero />
           <Banner />
           <Vision />

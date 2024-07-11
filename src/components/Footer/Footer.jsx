@@ -84,8 +84,8 @@ const Footer = () => {
                             <div className="h-[1px] bg-white/10 bg-gradient-to-r from-white/5 from-40% via-white via-50% to-white/5 to-60%"></div>
                         </div>
                     </div>
-                    <div className="block px-5 py-10 md:hidden">
-                        <div className="flex flex-col gap-6 py-10">
+                    <div className="block px-5 py-2 mt-[-3rem] md:hidden">
+                        <div className="flex flex-col gap-6 py-0">
                             <div className="flex flex-col gap-5 text-center">
                                 <h1 className="text-[42px] lg:text-8xl font-semibold">Early Access</h1>
                                 <p className="text-white/80 text-[15px] font-semibold">

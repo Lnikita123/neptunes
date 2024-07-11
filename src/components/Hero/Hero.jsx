@@ -23,7 +23,7 @@ const Hero = () => {
                                 </div>
                             </div>
                             <div className="max-h-[600px] max-w-[1800px] w-full overflow-hidden relative">
-                                <div style={{ zIndex: 50 }} className="absolute inset-0 bg-gradient-to-r from-black from-0% via-transparent to-100% to-black"></div><video className="h-full w-full scale-150 -translate-y-[20%]" muted loop autoPlay>
+                                <div style={{ zIndex: 20 }} className="absolute inset-0 bg-gradient-to-r from-black from-0% via-transparent to-100% to-black"></div><video className="h-full w-full scale-150 -translate-y-[20%]" muted loop autoPlay>
                                     <source src="/ocean.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video></div>
