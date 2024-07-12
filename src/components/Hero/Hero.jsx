@@ -4,7 +4,7 @@ const Hero = () => {
 
             <div className="relative py-20 overflow-hidden sm:py-0">
                 {/* Vertical Lines with Animated Drops */}
-                <div className="absolute z-50 flex justify-center w-full h-full mt-2 bg-transparent">
+                <div className="absolute z-50 flex justify-center w-full h-full mt-[20rem] bg-transparent">
                     <div className="relative z-10 w-full">
                         <div className="absolute right-0 h-full w-[1px] bg-slate-800/50 z-[990] overflow-hidden">
                             <div className="absolute w-full h-full "></div>
