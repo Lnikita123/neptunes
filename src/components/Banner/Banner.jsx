@@ -23,7 +23,7 @@ const Banner = () => {
         if (openDetails === null) {
             interval = setInterval(() => {
                 setActiveDot((prev) => (prev === 4 ? 1 : prev + 1));
-            }, 4000); // Automatically change the text every 4 seconds
+            }, 3000); // Automatically change the text every 4 seconds
         }
 
         return () => clearInterval(interval);
@@ -41,9 +41,9 @@ const Banner = () => {
     };
 
     return (
-        <div className='flex flex-col items-center justify-center'>
+        <div className="flex flex-col items-center justify-center bg-black/40">
             <div className="flex justify-center h-full w-full relative bg-black lg:mt-[10rem]">
-                <div className="bg-[url('/gridbg1.png')] bg-cover absolute inset-0 "></div>
+                <div className="bg-[url('/gridbg1.png')] bg-cover absolute inset-0  "></div>
                 <div className="relative z-10 flex flex-col items-center gap-10 p-8 md:p-10">
                     <h2 className="text-3xl font-semibold text-center text-white z-[100] font1">
                         Reimagine exploring oceans with our tools
@@ -59,24 +59,28 @@ const Banner = () => {
                             }}
                         />
 
+                        {/* Dot 1 */}
                         <div
-                            className="absolute left-[20%] top-[55%] cursor-pointer"
+                            className="absolute lg:left-[20%] left-[28%] lg:top-[55%] top-[56%] cursor-pointer"
                             style={{ transform: calculateTransform(mousePosition.x, mousePosition.y) }}
                         >
                             <div className="relative">
                                 <div
                                     className={`absolute w-5 h-5 lg:w-8 lg:h-8 bg-white rounded-full z-[900] ${activeDot === 1 ? 'ring-4 ring-white' : ''}`}
-                                    style={{ outline: '2px solid white', outlineOffset: '1px' }} onClick={() => handleDotClick(1)}
+                                    style={{ outline: '2px solid white', outlineOffset: '1px' }}
+                                    onClick={() => handleDotClick(1)}
                                 ></div>
                                 {activeDot === 1 && (
-                                    <div className="absolute top-[60%] left-[50%] transform translate-x-[-50%] mt-4 border-2 border-blue-500 p-2 rounded-md whitespace-nowrap glass">
+                                    <div className="absolute top-0 p-2 mt-4 transform -translate-x-1/2 border-2 border-blue-500 rounded-md left-1/2 whitespace-nowrap glass">
                                         <img src="/1.png" alt="Detail" className="object-contain w-32 h-32" />
-                                        <p className='p-2 bg-white border-2 rounded-full border-grey-400 '>AI inside for your help</p>
+                                        <p className="p-2 bg-white border-2 rounded-full border-grey-400">AI inside for your help</p>
+                                        <div className="absolute inset-0 border-2 border-blue-500 rounded-md animate-zoom"></div>
                                     </div>
                                 )}
                             </div>
                         </div>
 
+                        {/* Dot 2 */}
                         <div
                             className="absolute left-[36%] top-[25%] cursor-pointer"
                             style={{ transform: calculateTransform(mousePosition.x, mousePosition.y) }}
@@ -84,17 +88,20 @@ const Banner = () => {
                             <div className="relative">
                                 <div
                                     className={`absolute w-5 h-5 lg:w-8 lg:h-8 bg-white rounded-full z-[900] ${activeDot === 2 ? 'ring-4 ring-white' : ''}`}
-                                    style={{ outline: '2px solid white', outlineOffset: '1px' }} onClick={() => handleDotClick(2)}
+                                    style={{ outline: '2px solid white', outlineOffset: '1px' }}
+                                    onClick={() => handleDotClick(2)}
                                 ></div>
                                 {activeDot === 2 && (
                                     <div className="absolute bottom-[150%] left-[50%] transform translate-x-[-50%] mb-4 border-2 border-blue-500 p-2 rounded-md whitespace-nowrap glass">
                                         <img src="/2.png" alt="Detail" className="object-contain w-32 h-32" />
-                                        <p className='p-2 bg-white border-2 rounded-full border-grey-400 '>AI inside for your help</p>
+                                        <p className="p-2 bg-white border-2 rounded-full border-grey-400">AI inside for your help</p>
+                                        <div className="absolute inset-0 border-2 border-blue-500 rounded-md animate-zoom"></div>
                                     </div>
                                 )}
                             </div>
                         </div>
 
+                        {/* Dot 3 */}
                         <div
                             className="absolute left-[56%] top-[50%] cursor-pointer"
                             style={{ transform: calculateTransform(mousePosition.x, mousePosition.y) }}
@@ -102,17 +109,20 @@ const Banner = () => {
                             <div className="relative">
                                 <div
                                     className={`absolute w-5 h-5 lg:w-8 lg:h-8 bg-white rounded-full z-[900] ${activeDot === 3 ? 'ring-4 ring-white' : ''}`}
-                                    style={{ outline: '2px solid white', outlineOffset: '1px' }} onClick={() => handleDotClick(3)}
+                                    style={{ outline: '2px solid white', outlineOffset: '1px' }}
+                                    onClick={() => handleDotClick(3)}
                                 ></div>
                                 {activeDot === 3 && (
                                     <div className="absolute bottom-[150%] left-[50%] transform translate-x-[-50%] mb-4 border-2 border-blue-500 p-2 rounded-md whitespace-nowrap glass">
                                         <img src="/3.png" alt="Detail" className="object-contain w-32 h-32" />
-                                        <p className='p-2 bg-white border-2 rounded-full border-grey-400 '>AI inside for your help</p>
+                                        <p className="p-2 bg-white border-2 rounded-full border-grey-400">AI inside for your help</p>
+                                        <div className="absolute inset-0 border-2 border-blue-500 rounded-md animate-zoom"></div>
                                     </div>
                                 )}
                             </div>
                         </div>
 
+                        {/* Dot 4 */}
                         <div
                             className="absolute left-[70%] top-[80%] cursor-pointer"
                             style={{ transform: calculateTransform(mousePosition.x, mousePosition.y) }}
@@ -120,22 +130,40 @@ const Banner = () => {
                             <div className="relative">
                                 <div
                                     className={`absolute w-5 h-5 lg:w-8 lg:h-8 bg-white rounded-full z-[900] ${activeDot === 4 ? 'ring-4 ring-white' : ''}`}
-                                    style={{ outline: '2px solid white', outlineOffset: '1px' }} onClick={() => handleDotClick(4)}
+                                    style={{ outline: '2px solid white', outlineOffset: '1px' }}
+                                    onClick={() => handleDotClick(4)}
                                 ></div>
                                 {activeDot === 4 && (
-                                    <div className="absolute top-[-150%] left-[50%] transform translate-x-[-50%] mt-4 border-2 border-blue-500 p-2 rounded-md whitespace-nowrap glass">
+                                    <div className="absolute top-0 p-2 mt-4 transform -translate-x-1/2 border-2 border-blue-500 rounded-md left-1/2 whitespace-nowrap glass">
                                         <img src="/4.png" alt="Detail" className="object-contain w-32 h-32" />
-                                        <p className='p-2 bg-white border-2 rounded-full border-grey-400 '>AI inside for your help</p>
+                                        <p className="p-2 bg-white border-2 rounded-full border-grey-400">AI inside for your help</p>
+                                        <div className="absolute inset-0 border-2 border-blue-500 rounded-md animate-zoom"></div>
                                     </div>
                                 )}
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-            <p className="text-sm text-center text-white md:text-base lg:max-w-[1000px] max-w-[300px] lg:mt-0 mt-20">To lead the future of underwater exploration by providing cutting-edge technology that empowers researchers, scientists, and enthusiasts to unlock the mysteries of the deep sea. We strive to make oceanic discovery more
-                accessible, efficient, and insightful, driving forward our understanding and stewardship of the world&#x27;s oceans.</p>
+            <p className="text-sm text-center text-white md:text-base lg:max-w-[1000px] max-w-[300px] lg:mt-0 mt-20">
+                To lead the future of underwater exploration by providing cutting-edge technology that empowers researchers, scientists, and enthusiasts to unlock the mysteries of the deep sea. We strive to make oceanic discovery more
+                accessible, efficient, and insightful, driving forward our understanding and stewardship of the world's oceans.
+            </p>
+
+            <style>{`
+                @keyframes zoom {
+                    0%, 100% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(1.2);
+                    }
+                }
+
+                .animate-zoom {
+                    animation: zoom 2s infinite;
+                }
+            `}</style>
         </div>
     );
 };

@@ -2,8 +2,10 @@
 const Vision = () => {
     return (
         <>
-            <div className="relative hidden py-20 space-y-24 overflow-hidden lg:block">
-                <div className="bg-[url('/seaimage.png')] h-full w-full bg-cover bg-center absolute inset-0 "></div>
+            <div className="relative z-50 hidden py-20 space-y-24 overflow-hidden lg:block">
+                <div className="bg-[url('/seaimage.png')] h-full w-full bg-cover bg-center absolute inset-0  " style={{ opacity: 0.5, filter: "blur(5px)" }}></div>
+                <div className="h-[55vh] top-80 lg:h-[90vh] lg:-top-20 w-full bg-center absolute -z-[500] bg-gradient-to-t from-black from-0% via-20% via-transparent to-95% to-black/50 max-w-[1600px] left-[50%] translate-x-[-50%]"></div>
+                <div className="h-[55vh] top-80 lg:h-[90vh] lg:-top-20 w-full bg-center absolute -z-[500] bg-gradient-to-r from-black/30 from-0% via-transparent to-100% to-black/30 max-w-[1600px] left-[50%] translate-x-[-50%]"></div>
                 <div className="flex flex-col gap-10 lg:gap-20 relative z-10 mt-[8rem] ">
                     <div className='flex flex-row items-center justify-center gap-10 py-20'>
                         <div className="flex flex-col aspect-[183/143] w-full scale-[1.46] lg:translate-x-0 lg:scale-100 mt-40 min-w-80 max-w-[400px] lg:min-w-[500px] lg:w-[40%] lg:max-w-[600px] lg:mt-0 min-[644px]:translate-x-[23%]">
@@ -64,7 +66,9 @@ const Vision = () => {
                 </div>
             </div>
             <div className="relative overflow-hidden lg:hidden">
-                <div className="bg-[url('/seaimage.png')] h-full w-full bg-cover bg-center absolute inset-0  bg-black"></div>
+                <div className="bg-[url('/seaimage.png')] h-full w-full bg-cover bg-center absolute inset-0   bg-black" style={{ opacity: 0.8, filter: "blur(5px)" }}></div>
+                <div className="h-[55vh] top-80 lg:h-[90vh] lg:-top-20 w-full bg-center absolute -z-[500] bg-gradient-to-t from-black from-0% via-20% via-transparent to-95% to-black/50 max-w-[1600px] left-[50%] translate-x-[-50%]"></div>
+                <div className="h-[55vh] top-80 lg:h-[90vh] lg:-top-20 w-full bg-center absolute -z-[500] bg-gradient-to-r from-black/30 from-0% via-transparent to-100% to-black/30 max-w-[1600px] left-[50%] translate-x-[-50%]"></div>
                 <div className="flex flex-col gap-10 lg:gap-20 relative z-10 mt-[4rem] mx-2">
                     <div className='flex flex-col items-center justify-center gap-10 py-20 lg:flex-row'>
                         <div className='flex flex-col gap-2 mx-4 text-white lg:hidden'>

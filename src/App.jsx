@@ -20,7 +20,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="relative bg-black">
+
       {loading ? (
         <div className="fixed left-0 top-0 right-0 bottom-0 z-[996] opacity-100 block duration-1000 bg-black bg-cover">
           <div className="relative w-full h-full">
@@ -34,7 +35,15 @@ const App = () => {
       ) : (
         <>
           <Navbar />
-
+          <div className="absolute z-50 flex justify-center w-full h-auto mt-8 bg-transparent">
+            <div className="relative z-10 w-full">
+              <div className="absolute right-0 h-full w-[1px] bg-slate-800/50 z-[990]"></div>
+            </div>
+            <div className="relative w-full max-w-[1366px] shrink-0 z-[-700]"></div>
+            <div className="relative w-full">
+              <div className="absolute left-0 h-full w-[1px] bg-slate-800/50 z-[990]"></div>
+            </div>
+          </div>
           <Hero />
           <Banner />
           <Vision />
