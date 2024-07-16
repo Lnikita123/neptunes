@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
@@ -7,6 +8,8 @@ import Intro from "./components/Intro/Intro";
 import Team from "./components/Team/Team";
 import Footer from "./components/Footer/Footer";
 import Communication from "./components/Communication/Communication";
+import Forum from "./components/Forum/Forum";
+import QuestionDetail from "./components/Forum/QuestionDetails";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +24,6 @@ const App = () => {
 
   return (
     <div className="relative bg-black">
-
       {loading ? (
         <div className="fixed left-0 top-0 right-0 bottom-0 z-[996] opacity-100 block duration-1000 bg-black bg-cover">
           <div className="relative w-full h-full">
@@ -34,23 +36,33 @@ const App = () => {
         </div>
       ) : (
         <>
-          <Navbar />
-          <div className="absolute z-50 flex justify-center w-full h-auto mt-8 bg-transparent">
-            <div className="relative z-10 w-full">
-              <div className="absolute right-0 h-full w-[1px] bg-slate-800/50 z-[990]"></div>
+          <Router>
+            <Navbar />
+            <div className="absolute z-50 flex justify-center w-full h-auto mt-8 bg-transparent">
+              <div className="relative z-10 w-full">
+                <div className="absolute right-0 h-full w-[1px] bg-slate-800/50 z-[990]"></div>
+              </div>
+              <div className="relative w-full max-w-[1366px] shrink-0 z-[-700]"></div>
+              <div className="relative w-full">
+                <div className="absolute left-0 h-full w-[1px] bg-slate-800/50 z-[990]"></div>
+              </div>
             </div>
-            <div className="relative w-full max-w-[1366px] shrink-0 z-[-700]"></div>
-            <div className="relative w-full">
-              <div className="absolute left-0 h-full w-[1px] bg-slate-800/50 z-[990]"></div>
-            </div>
-          </div>
-          <Hero />
-          <Banner />
-          <Vision />
-          <Intro />
-          <Communication />
-          <Team />
-          <Footer />
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <Hero />
+                  <Banner />
+                  <Vision />
+                  <Intro />
+                  <Communication />
+                  <Team />
+                </>
+              } />
+              <Route path="/Forum" element={<Forum />} />
+              <Route path="/question/:questionId" element={<QuestionDetail />} />
+            </Routes>
+            <Footer />
+          </Router>
         </>
       )}
     </div>
